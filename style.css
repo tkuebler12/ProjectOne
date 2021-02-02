@@ -1,0 +1,105 @@
+/* body {
+    background-image: url();
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+/* Brand Link  */
+a.brand-logo {
+    padding-left: 30px;
+    inline-size: fit-content;
+}
+
+/* Brand Icon  */
+nav .brand-logo i, nav .brand-logo [class^="mdi-"], nav .brand-logo [class*="mdi-"], nav .brand-logo i.material-icons {
+    float: right;
+    margin-left: 15px;
+}
+
+/* Row that contains 2 main cards  */
+.cards-row {
+    margin: 50px auto;
+    
+}
+
+.recipe-card, .nutrition-card {
+    padding: 5px 25px 18px;
+    height: 450px;
+}
+
+.card-title {
+    color: aliceblue;
+}
+
+/* "Search for" titles */
+.card .card-title {
+    font-size: 27px;
+    font-weight: 300;
+}
+
+.card-text { 
+    height: -webkit-fill-available;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+/* Contents in collapsing bar  */
+.card-text p { 
+    width: fit-content; 
+    word-break: break-word;
+}
+
+#recipe-search-nav {
+    margin: 10px auto;
+}
+
+/* The collapsing bar  */
+.collapsible {
+    color: black;
+    z-index: 1;
+    position: relative;
+}
+
+/* Collapsing bar when clicked  */
+.collapsible-body {
+    padding: 1rem 1rem;
+    height: 200px;
+}
+
+/* collapsing bar - not clciked  */
+.collapsible:not(.browser-default)>li {
+    list-style-type: none;
+    background-color: whitesmoke;
+    margin-top: 10px;
+}
+
+/* Informative text at bottom of cards  */
+.info {
+    z-index: 0;
+    margin: 180px 50px;
+    position: absolute;
+    color: aliceblue;
+}
+
+#database-card {
+    z-index: 0;
+    margin: 180px auto;
+    position: relative;
+    color: aliceblue;
+    float: right;
+}
+
+#main-card {
+    z-index: 0;
+    /* margin: 180px auto; */
+    position: relative;
+    color: aliceblue;
+    /* float: left; */
+}
+
+/* Button (taken out - for now)  */
+/* .waves-effect {
+    float:right;
+} */
+  

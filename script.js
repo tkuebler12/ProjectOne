@@ -1,4 +1,21 @@
 $(document).ready(function () {
+// <<<<<<< HEAD
+// <<<<<<< HEAD
+    ​
+   
+    ​
+    
+    
+// =======
+​
+    // Food Database API
+​
+    var ingr = ""
+    // var APP_ID = "cdc2f678"
+    // var APP_KEY = "2ccb5f96df52396e065d26ba486dcc0a -"
+    var queryURL = 'https://api.edamam.com/search?app_id=cdc2f678&app_key=2ccb5f96df52396e065d26ba486dcc0a&q=pizza';
+​
+// =======
 
 
     // Recipe Search
@@ -6,6 +23,7 @@ $(document).ready(function () {
     var api_id = "cdc2f678";
     var app_key = "2ccb5f96df52396e065d26ba486dcc0a";
     var queryURL = "https://api.edamam.com/search?q=" + searchedFood + "&app_id=cdc2f678&app_key=2ccb5f96df52396e065d26ba486dcc0a";
+// >>>>>>> 9d50e98d46d0c2458679c09427741a64af67799d
     $.ajax({
         url: queryURL,
         method: "GET",
@@ -52,3 +70,4 @@ $(document).ready(function () {
     })
 
 });
+// >>>>>>> cab7e69aac971f8ac2ea8621f78e2d2e9e99790d
