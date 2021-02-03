@@ -1,6 +1,10 @@
 $(document).ready(function () {
 
-
+    // Food Database API
+    var ingr = ""
+    // var APP_ID = "cdc2f678"
+    // var APP_KEY = "2ccb5f96df52396e065d26ba486dcc0a -"
+    var queryURL = 'https://api.edamam.com/search?app_id=cdc2f678&app_key=2ccb5f96df52396e065d26ba486dcc0a&q=pizza';
 
     // Run Recipe search on this click event
     $(".RecipeSearchBtn").on("click", function(){
@@ -15,10 +19,7 @@ $(document).ready(function () {
     // var app_key = "2ccb5f96df52396e065d26ba486dcc0a";
     var searchedFood = $('.RecipeSearchInput').val().trim();
     var queryURL = "https://api.edamam.com/search?q=" + searchedFood + "&app_id=cdc2f678&app_key=2ccb5f96df52396e065d26ba486dcc0a";
-    
-    localStorage.clear();
-    localStorage.setItem("food", searchedFood);
-
+      
     $.ajax({
         url: queryURL,
         method: "GET",
@@ -71,3 +72,4 @@ $(document).ready(function () {
     })
 
 });
+// >>>>>>> cab7e69aac971f8ac2ea8621f78e2d2e9e99790d
