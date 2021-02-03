@@ -1,24 +1,22 @@
 $(document).ready(function () {
 
-    // Food Database API
-    var ingr = ""
-    // var APP_ID = "cdc2f678"
-    // var APP_KEY = "2ccb5f96df52396e065d26ba486dcc0a -"
-    var queryURL = 'https://api.edamam.com/search?app_id=cdc2f678&app_key=2ccb5f96df52396e065d26ba486dcc0a&q=pizza';
-
     // Run Recipe search on this click event
-    $(".RecipeSearchBtn").on("click", function(){
-        recipeResponse();
-
+    $(".recipe-search-btn").on("click", function(event){
+        event.preventDefault();
+        var searchedFood = $('.RecipeSearchInput').val().trim();
+        recipeResponse(searchedFood);
     });
-    
-    function recipeResponse(){
+
+    function clearRecipe(){
+        $(".ingredientList").empty();
+    };
+
+    function recipeResponse(food){
 
     // Recipe Search
     // var api_id = "cdc2f678";
     // var app_key = "2ccb5f96df52396e065d26ba486dcc0a";
-    var searchedFood = $('.RecipeSearchInput').val().trim();
-    var queryURL = "https://api.edamam.com/search?q=" + searchedFood + "&app_id=cdc2f678&app_key=2ccb5f96df52396e065d26ba486dcc0a";
+    var queryURL = "https://api.edamam.com/search?q=" + food + "&app_id=cdc2f678&app_key=2ccb5f96df52396e065d26ba486dcc0a";
       
     $.ajax({
         url: queryURL,
@@ -35,10 +33,12 @@ $(document).ready(function () {
             var ingredient = ingredientListObj[i].text;
             $(".recipe-name").text(recipeName);
             $(".ingredientList").prepend("<li>" + ingredient + "<li>");
-            $(".expandBtn").text("Expand for " + searchedFood + " Ingredients");
+            $(".expandBtn").text("Expand for " + food + " Ingredients");
         };
 
     });
+
+    clearRecipe();
 
     };
 
