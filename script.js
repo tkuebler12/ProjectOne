@@ -3,7 +3,7 @@ $(document).ready(function () {
     // Run Recipe search on this click event
     $(".recipe-search-btn").on("click", function(event){
         event.preventDefault();
-        $(".collapsible").removeClass("hide")
+        $(".popout-recipe").removeClass("hide")
         var searchedFood = $('.RecipeSearchInput').val().trim();
         recipeResponse(searchedFood);
     });
@@ -11,6 +11,9 @@ $(document).ready(function () {
     function clearRecipe(){
         $(".ingredientList").empty();
     };
+
+    clearRecipeSearch();
+
 
     function recipeResponse(food){
 
@@ -30,6 +33,7 @@ $(document).ready(function () {
             var recipeName = response.q;
             var ingredient = ingredientListObj[i].text;
             $(".recipe-name").text(recipeName);
+            $(".collapsible-recipe-header").text(recipeName);
             $(".ingredientList").prepend("<li>" + ingredient + "<li>");
             $(".expandBtn").text("Expand for " + food + " Ingredients");
         };
