@@ -51,6 +51,10 @@ nav .brand-logo i, nav .brand-logo [class^="mdi-"], nav .brand-logo [class*="mdi
     word-break: break-word;
 }
 
+.hide {
+    display: none;
+}
+
 #recipe-search-nav, #nutrition-search-nav {
     margin: 10px auto;
 }
@@ -79,7 +83,6 @@ nav .input-field {
 .btn:hover, .btn-large:hover, .btn-small:hover {
     background-color: darkseagreen;
 }
-
 
 /* The collapsing bar  */
 .collapsible {
