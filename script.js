@@ -3,6 +3,7 @@ $(document).ready(function () {
     // Run Recipe search on this click event
     $(".recipe-search-btn").on("click", function(event){
         event.preventDefault();
+        $(".collapsible").removeClass("hide")
         var searchedFood = $('.RecipeSearchInput').val().trim();
         recipeResponse(searchedFood);
     });
