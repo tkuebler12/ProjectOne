@@ -22,9 +22,6 @@ $(document).ready(function () {
         url: queryURL,
         method: "GET",
     }).then(function(response){
-        console.log("----------------------------------------")
-        console.log("Recipe", response);
-        console.log("----------------------------------------")
 
         var ingredientListObj = response.hits[0].recipe.ingredients;
 
@@ -42,25 +39,10 @@ $(document).ready(function () {
 
     };
 
-
-    // Nutrition Search
-    /*var nutritionSearch = "dragon%20fruit";
-    var api_id = "186ab126";
-    var app_key = "be84bbda46e01041f055652ea7ba013d";
-    var queryURL = "https://api.edamam.com/api/nutrition-data?ingr=" + nutritionSearch + "&app_id=186ab126&app_key=be84bbda46e01041f055652ea7ba013d";
-    $.ajax({
-        url: queryURL,
-        method: "GET",
-    }).then(function(response){
-        console.log("Nutrition API");
-        console.log(response);
-    })*/
-
-
     // Food Database
     var foodDatabase = "olive%20oil";
-    var api_id = "186ab126";
-    var app_key = "be84bbda46e01041f055652ea7ba013d";
+    // var api_id = "186ab126";
+    // var app_key = "be84bbda46e01041f055652ea7ba013d";
     var queryURL = "https://api.edamam.com/api/food-database/v2/parser?nutrition-type=logging&ingr=" + foodDatabase + "&app_id=186ab126&app_key=be84bbda46e01041f055652ea7ba013d";
     $.ajax({
         url: queryURL,
@@ -72,4 +54,3 @@ $(document).ready(function () {
     })
 
 });
-// >>>>>>> cab7e69aac971f8ac2ea8621f78e2d2e9e99790d
