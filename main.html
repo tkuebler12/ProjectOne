@@ -19,11 +19,9 @@
   <!-- Header Nav Bar -->
   <nav>
     <div class="nav-wrapper header-nav light-green hoverable text-flow">
-      <a href="#" class="brand-logo text-flow">Ready S.E.T.T. Eat! <i class="material-icons">restaurant_menu</i> </a>
+      <a href="" class="brand-logo text-flow">Ready S.E.T.T. Eat! <i class="material-icons">restaurant_menu</i> </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li class="nav-link"><a href="sass.html">Meet the S.E.T.T. Team</a></li>
-        <li class="nav-link"><a href="badges.html">Other Page</a></li>
-        <li class="nav-link"><a href="collapsible.html">JavaScript</a></li>
+        <li class="nav-link"><a>Meet the S.E.T.T. Team</a></li>
       </ul>
     </div>
   </nav>
@@ -56,7 +54,7 @@
         <!-- Expanding Recipe  -->
         <ul class="collapsible popout popout-recipe hide">
           <li class="active">
-            <div class="collapsible-header collapsible-recipe-header"><i class="material-icons">featured_play_list</i>Expand for Recipe</div>
+            <div class="collapsible-header collapsible-recipe-header"></div>
             <div class="collapsible-body">
               <!-- Ingredients go in card text area  -->
               <div class="card-text">
@@ -82,7 +80,7 @@
             <form>
               <!-- Text Input -->
               <div class="input-field">
-                <input id="search" type="search" required>
+                <input class="nutrition-search-input" id="search" type="search" required>
                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                 <i class="material-icons">close<button class="btn nutrition-search-btn waves-effect waves-light" type="submit" name="action">Submit
                 </button></i>
@@ -94,12 +92,11 @@
         <!-- Expanding nutrition  -->
         <ul class="collapsible popout popout-nutrition hide">
           <li class="active">
-            <div class="collapsible-header"><i class="material-icons">featured_play_list</i>Expand for Nutrition Info</div>
+            <div class="nutrition-name collapsible-header"></div>
             <div class="collapsible-body">
               <!-- Nutrition facts go in card text area  -->
               <div class="card-text">
-                <p class="nutrition-name"><b>Item passes here</b></p>
-                <p>Nutrition Info on item passes here here</p>
+                <p id="newText"></p>
               </div>
             </div>
           </li>
