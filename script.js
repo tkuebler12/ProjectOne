@@ -1,11 +1,19 @@
 $(document).ready(function () {
 
+    // Recipe's Local Storage Information
+    function saveRecipe (newRecipe){
+        var recipeArr = JSON.parse(localStorage.getItem("recipeArray")) || [];
+        recipeArr.push(newRecipe);
+        localStorage.setItem("recipeArray", JSON.stringify(recipeArr));
+    }
+
     // Run Recipe search on this click event
     $(".recipe-search-btn").on("click", function (event) {
         event.preventDefault();
         $(".popout-recipe").removeClass("hide")
         var searchedFood = $('.RecipeSearchInput').val().trim();
         recipeResponse(searchedFood);
+        saveRecipe(searchedFood);
     });
 
     // Clear recipe when a new one is searched
@@ -41,12 +49,20 @@ $(document).ready(function () {
 
     };
 
+    // Food Database's Local Storage Information
+    function saveFoodNutr (newFoodNutr){
+        var nutritionArr = JSON.parse(localStorage.getItem("nutritionArray")) || [];
+        nutritionArr.push(newFoodNutr);
+        localStorage.setItem("nutritionArray", JSON.stringify(nutritionArr));
+    }
+
     // Run Food Database search on this click event
     $(".nutrition-search-btn").on("click", function (event) {
         event.preventDefault();
         $(".popout-nutrition").removeClass("hide")
         var nutritionSearch = $('.nutrition-search-input').val();
         foodDatabaseResponse(nutritionSearch);
+        saveFoodNutr(nutritionSearch);
     });
 
     // Clear food facts when a new one is searched
