@@ -54,13 +54,7 @@ $(document).ready(function () {
         $("#newText").empty();
     };
 
-    // function clearRecipe(){
-    //     $(".ingredientList").empty();
-    // };
-
-
     function foodDatabaseResponse(food) {
-        // var hotdog = "hotdog"
         // Food Database
         // var api_id = "186ab126";
         // var app_key = "be84bbda46e01041f055652ea7ba013d";
@@ -69,10 +63,6 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET",
         }).then(function (response) {
-            console.log("----------------------------------------")
-            console.log("Food Database", response);
-            console.log("----------------------------------------")
-            // console.log(hotdog);
             var carbP = $("<p>");
             var energyP = $("<p>");
             var fatP = $("<p>");
@@ -101,42 +91,3 @@ $(document).ready(function () {
 
     };
 });
-
-
-
-
-
-/*
-//var foodDatabase = $("#inputField").val();
-var foodDatabase = "hotdog";
-var api_id = "186ab126";
-var app_key = "be84bbda46e01041f055652ea7ba013d";
-var queryURL = "https://api.edamam.com/api/food-database/v2/parser?nutrition-type=logging&ingr=" + foodDatabase + "&app_id=186ab126&app_key=be84bbda46e01041f055652ea7ba013d";
-$.ajax({
-    url: queryURL,
-    method: "GET",
-}).then(function(response){
-   var carbP = $("<p>");
-   var energyP = $("<p>");
-   var fatP = $("<p>");
-   var fiberP = $("<p>");
-   var proteinP = $("<p>");
-   var Carbs = response.parsed[0].food.nutrients.CHOCDF;
-   var Energy = response.parsed[0].food.nutrients.ENERC_KCAL;
-   var Fat = response.parsed[0].food.nutrients.FAT;
-   var Fiber = response.parsed[0].food.nutrients.FIBTG;
-   var Protein = response.parsed[0].food.nutrients.PROCNT;
-    $(".nutrition-search-btn").click(function() {
-    console.log($("#newText").append(carbP));
-    console.log($(carbP).text("Carbs: "+ Carbs +" g"));
-    $("#newText").append(energyP);
-    $(energyP).text("Energy: "+ Energy +" kcal");
-    $("#newText").append(fatP);
-    $(fatP).text("Fat: "+ Fat + " g");
-    $("#newText").append(fiberP);
-    $(fiberP).text("Fiber: "+ Fiber + " g");
-    $("#newText").append(proteinP);
-    $(proteinP).text("Protein: "+ Protein + " g");
-    });
-});
-*/
